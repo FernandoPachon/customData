@@ -1,8 +1,9 @@
 import React from 'react';
-import {useCssHandles}from'vtex.css-handles'
-import {useProduct} from "vtex.product-context"
 
-const infoDataCart=()=>{
-  const {}=useProduct
+const InfoDataCart=()=>{
+  return(
+    <div>Hey..</div>
+  )
 }
-export default infoDataCart
+
+export default InfoDataCart

@@ -3045,6 +3045,10 @@ iterall@^1.2.2:
   resolved "https://registry.yarnpkg.com/iterall/-/iterall-1.3.0.tgz#afcb08492e2915cbd8a0884eb93a8c94d0d72fea"
   integrity sha512-QZ9qOMdF+QLHxy1QIpUHUU1D5pS2CG2P69LF6L6CPjPYA/XMOmKV3PZpawHoAjHNyB0swdVTRxdYT4tbBbxqwg==
 
+"itgloberspartnercl.info-data-cart@https://fernandopachon--itgloberspartnercl.myvtex.com/_v/private/typings/linked/v1/itgloberspartnercl.info-data-cart@0.0.1+build1675711710/public/@types/itgloberspartnercl.info-data-cart":
+  version "0.0.1"
+  resolved "https://fernandopachon--itgloberspartnercl.myvtex.com/_v/private/typings/linked/v1/itgloberspartnercl.info-data-cart@0.0.1+build1675711710/public/@types/itgloberspartnercl.info-data-cart#d700dfb437595999d4d6fe36b418a5680d498628"
+
 jest-changed-files@^25.5.0:
   version "25.5.0"
   resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-25.5.0.tgz#141cc23567ceb3f534526f8614ba39421383634c"
@@ -4850,7 +4854,7 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^3.9.6, typescript@^3.9.7:
+typescript@3.9.7, typescript@^3.9.7:
   version "3.9.7"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
   integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==

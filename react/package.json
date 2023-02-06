@@ -1,6 +1,6 @@
 {
-  "name": "CHANGE_ME",
-  "version": "0.0.0",
+  "name": "info-data-cart",
+  "version": "0.0.1",
   "scripts": {
     "test": "vtex-test-tools test"
   },
@@ -20,7 +20,8 @@
     "@vtex/tsconfig": "^0.4.4",
     "apollo-cache-inmemory": "^1.6.5",
     "graphql": "^14.6.0",
-    "typescript": "^3.9.6",
+    "itgloberspartnercl.info-data-cart": "https://fernandopachon--itgloberspartnercl.myvtex.com/_v/private/typings/linked/v1/itgloberspartnercl.info-data-cart@0.0.1+build1675711710/public/@types/itgloberspartnercl.info-data-cart",
+    "typescript": "3.9.7",
     "vtex.product-context": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.0/public/@types/vtex.product-context",
     "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.132.4/public/@types/vtex.render-runtime"
   }
