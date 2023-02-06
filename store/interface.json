@@ -1,0 +1,6 @@
+{
+  "info-data-cart":{
+    "component":"InfoDataCart",
+    "render":"client"
+  }
+}
