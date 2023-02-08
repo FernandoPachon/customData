@@ -13,7 +13,9 @@
   "dependencies": {
     "vtex.product-context": "0.x",
     "vtex.order-items": "0.x",
-    "vtex.order-manager": "0.x"
+    "vtex.order-manager": "0.x",
+    "vtex.css-handles": "0.x",
+    "vtex.product-availability": "0.x"
   },
   "registries": [
     "smartcheckout"

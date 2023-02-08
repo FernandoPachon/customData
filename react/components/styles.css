@@ -1,0 +1,15 @@
+.styles_container{
+  border-radius: 10;
+  height: "100%";
+  width: 22rem;
+}
+.styles_text{
+  color:gray;
+  font-weight: 100;
+  font-size: 10;
+}
+.styles_title{
+  color: black;
+  font-weight: 100;
+  font-size: 10;
+}
