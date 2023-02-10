@@ -25,19 +25,18 @@ const InfoDataCart = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Accept: 'application/json',
+        'Accept': 'application/json',
       },
       body: JSON.stringify({
-        items: [
+        "items": [
           {
-            id: { productId },
-            quantity: 1,
-            seller: 1,
-          },
+            "id": `${productId}`,
+            "quantity": 1,
+            "seller": "1"
+          }
         ],
-        country: 'BRA',
-        postalCode: '12345-000',
-        geoCoordinates: [-47.924747467041016],
+        "country": "COL",
+        "postalCode": "854030"
       }),
     }
     const res = fetch(`/api/checkout/pub/orderForms/simulation`, config)
@@ -49,7 +48,7 @@ const InfoDataCart = () => {
   }
   useEffect(() => {
     getAvaliable()
-  }, [])
+  }, [productId])
 
   return (
     <>
