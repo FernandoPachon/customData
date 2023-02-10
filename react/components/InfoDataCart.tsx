@@ -7,12 +7,12 @@ import './styles.css'
 const InfoDataCart = () => {
   const CSS_HANDLES = ['styles_title', 'styles_container', 'styles_text']
   const handles = useCssHandles(CSS_HANDLES)
-  const [getAval, setGetAval] = useState({})
+  const [data, setData] = useState({})
   const {
     orderForm: { items },
   } = useOrderForm()
   const productContextValue = useProduct()
-  console.log(getAval)
+  console.log(data)
 
   const productId = productContextValue?.product?.items?.[0]?.itemId
   const description = productContextValue?.product?.description
@@ -20,36 +20,40 @@ const InfoDataCart = () => {
   const quantity = productContextValue?.selectedQuantity
   console.log('producto', productId, items)
 
-  async function getAvaliable() {
+  async function Context() {
     const config = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Accept: 'application/json',
+        'Accept': 'application/json',
       },
       body: JSON.stringify({
-        items: [
+        "items": [
           {
-            id: { productId },
-            quantity: 1,
-            seller: 1,
-          },
+            "id": `${productId}`,
+            "quantity": 1,
+            "seller": "1"
+          }
         ],
-        country: 'BRA',
-        postalCode: '12345-000',
-        geoCoordinates: [-47.924747467041016],
+        "country": "COL",
+        "postalCode": "854030"
       }),
     }
     const res = fetch(`/api/checkout/pub/orderForms/simulation`, config)
-    const aval = await (await res).json()
-    console.log(aval, 'aqui', aval.items[0].availability)
-    const available = aval.items[0].availability
+    const resp = await (await res).json()
+    console.log(resp, 'aqui', resp.items[0].availability)
+    var available = resp.items[0].availability
+    if (available==='cannotBeDelivered'){
+      available="Producto no disponible para tu región"
+    }else{
+      available="Producto disponible para tu región"
+    }
     console.log(available)
-    setGetAval(available)
+    setData(available)
   }
   useEffect(() => {
-    getAvaliable()
-  }, [])
+    Context()
+  }, [productId])
 
   return (
     <>
@@ -57,7 +61,7 @@ const InfoDataCart = () => {
         {/* <h2 className={handles.styles_title}>Context component</h2> */}
         <h4 className={handles.styles_text}>Id: {productId}</h4>
         <h4 className={handles.styles_text}>
-          Stock: {JSON.stringify(getAval, null, 4)}
+          Availability: {JSON.stringify(data, null, 4)}
         </h4>
         <h4 className={handles.styles_text}>Description: {description}</h4>
         <h4 className={handles.styles_text}>Categories: {categories}</h4>
